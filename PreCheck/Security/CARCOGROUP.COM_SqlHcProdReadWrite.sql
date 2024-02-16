@@ -1,0 +1,2 @@
+﻿CREATE USER [CARCOGROUP.COM\SqlHcProdReadWrite] FOR LOGIN [CARCOGROUP.COM\SqlHcProdReadWrite];
+

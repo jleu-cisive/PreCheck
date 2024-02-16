@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [PRECHECK\DDegenaro]
+    AUTHORIZATION [PRECHECK\DDegenaro];
+

@@ -1,0 +1,2 @@
+﻿CREATE USER [CARCOGROUP.COM\vgilbertson] FOR LOGIN [CARCOGROUP.COM\vgilbertson];
+

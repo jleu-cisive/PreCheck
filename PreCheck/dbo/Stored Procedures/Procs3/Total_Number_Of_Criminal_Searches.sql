@@ -1,0 +1,99 @@
+﻿-- Alter Procedure Total_Number_Of_Criminal_Searches
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- Modified By Radhika Dereddy on 04/04/2018
+-- Requester - Misty Smallwood 
+--Add a column named DeliveryMethod = The delivery method should be pulled from Intranet/Iris within the Researcher listing for that particular search. 
+--If you need to reference to another Qreport that currently pulls the deliverymethod from iris, you can use the Crim Pending Counts Status/Delivery - the 8th column is deliverymethod)
+--Add a column named Vendor = The vendor information should be pulled from the same location within Iris for the deliverymothod, 
+--just a different field named Vendor. This is highlighted in the 2nd screen shot at top of the page.
+-- =============================================
+
+--[Total_Number_Of_Criminal_Searches] '02/01/2018','03/10/2018', '**','CO','usa', 0 
+--[Total_Number_Of_Criminal_Searches] '02/01/2018','03/10/2018', '**','CO','usa', 1
+
+
+CREATE PROCEDURE [dbo].[Total_Number_Of_Criminal_Searches]
+	-- Add the parameters for the stored procedure here
+	@StartDate datetime,
+	@EndDate datetime,
+	@County varchar(50),
+	@State varchar(2),
+	@Country varchar(50),
+	@ByClient Bit
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+Create Table #temp1
+(
+ Apno int,
+ TotalCount int,
+ County varchar(40),
+ State varchar(25),
+ Country varchar(25),
+ DeliveryMethod varchar(50),
+ Vendor varchar(50)
+)
+
+	INSERT INTO #temp1 (Apno, TotalCount, County, State, Country, DeliveryMethod, Vendor)
+	SELECT c.Apno, count(*) as count, cc.a_county, cc.state, cc.country, c.DeliveryMethod, ir.R_Name
+	FROM crim c WITH (NOLOCK) 
+	INNER JOIN dbo.TblCounties cc  WITH (NOLOCK) ON c.cnty_no = cc.cnty_no 
+	INNER JOIN Iris_Researchers ir WITH (NOLOCK) on c.vendorid = ir.R_id
+	WHERE crimenteredtime >= @StartDate 
+	AND crimenteredtime < @EndDate
+	AND cc.a_county like '%' + @County + '%'
+	AND isnull(cc.state,'') like ('%' + @State + '%' )
+	AND isnull(cc.country,'') like ('%' + @Country + '%' )
+	AND Ishidden = 0
+	GROUP BY c.apno, cc.a_county,cc.state,cc.country, c.DeliveryMethod, ir.R_Name
+	
+Create Table #temp2
+(
+ Apno int,
+ TotalCount int,
+ CLNO int,
+ ClientName varchar(100),
+ County varchar(40),
+ State varchar(25),
+ Country varchar(25),
+ DeliveryMethod varchar(50),
+ Vendor varchar(50)
+)
+	INSERT INTO #temp2 (Apno, TotalCount, CLNO, CLientName, County, State, Country, DeliveryMethod, Vendor)
+	SELECT c.apno, count(*) as count, A.CLNO, CL.Name, cc.a_county, cc.state, cc.country, c.DeliveryMethod, ir.R_Name
+	FROM crim c WITH (NOLOCK) 
+	INNER JOIN dbo.TblCounties cc  WITH (NOLOCK)  ON c.cnty_no = cc.cnty_no  
+	INNER JOIN Appl A WITH (NOLOCK) ON c.Apno = A.Apno 
+	INNER JOIN Client CL WITH (NOLOCK) ON A.CLNO = CL.CLNO  
+	INNER JOIN Iris_Researchers ir WITH (NOLOCK) on c.vendorid = ir.R_id
+	WHERE crimenteredtime >= @StartDate 
+	AND crimenteredtime < @EndDate
+	AND cc.a_county like '%' + @County + '%'
+	AND isnull(cc.state,'') like ('%' + @State + '%' )
+	AND isnull(cc.country,'') like ('%' + @Country + '%' )
+	AND isHIdden = 0
+	GROUP BY c.apno, A.CLNO,CL.Name,cc.a_county,cc.state,cc.country,c.DeliveryMethod, ir.R_Name
+	ORDER BY A.CLNO
+
+	
+IF @ByClient = 0 
+	
+	SELECT Count(distinct Apno) as Count, County, State, Country, DeliveryMethod, Vendor FROM #temp1
+	GROUP BY County, State, Country, DeliveryMethod, Vendor
+		
+ELSE
+
+	SELECT Count( Apno) as Count, CLNO, ClientName, County, State, Country, DeliveryMethod, Vendor FROM #temp2
+	Group BY CLNO, ClientName, County, State, Country, DeliveryMethod, Vendor
+	ORDER BY CLNO
+
+END
+
+DROP TABLE #temp1
+DROP TABLE #temp2

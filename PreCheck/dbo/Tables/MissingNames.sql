@@ -1,0 +1,25 @@
+﻿CREATE TABLE [dbo].[MissingNames] (
+    [Internal ID]          FLOAT (53)     NULL,
+    [Internal ID2]         FLOAT (53)     NULL,
+    [ID]                   FLOAT (53)     NULL,
+    [Script ID]            NVARCHAR (255) NULL,
+    [AMT]                  FLOAT (53)     NULL,
+    [APNO]                 NVARCHAR (255) NULL,
+    [ApplicantName]        NVARCHAR (255) NULL,
+    [Clientname]           NVARCHAR (255) NULL,
+    [Clno]                 NVARCHAR (255) NULL,
+    [Date Created]         FLOAT (53)     NULL,
+    [Description]          NVARCHAR (255) NULL,
+    [External ID]          NVARCHAR (255) NULL,
+    [ID3]                  FLOAT (53)     NULL,
+    [Index]                FLOAT (53)     NULL,
+    [InvoiceDate]          FLOAT (53)     NULL,
+    [ReportCompletionDate] FLOAT (53)     NULL,
+    [InvoiceNumber]        NVARCHAR (255) NULL,
+    [Process Level]        NVARCHAR (255) NULL,
+    [SectionKeyID]         NVARCHAR (255) NULL,
+    [Column1]              NVARCHAR (255) NULL,
+    [Column2]              NVARCHAR (255) NULL,
+    [Column3]              NVARCHAR (255) NULL
+);
+

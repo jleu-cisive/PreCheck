@@ -1,0 +1,2 @@
+﻿CREATE USER [PRECHECK\App_Ddmin] FOR LOGIN [PRECHECK\App_Ddmin];
+

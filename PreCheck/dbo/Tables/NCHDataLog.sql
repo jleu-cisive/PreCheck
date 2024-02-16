@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[NCHDataLog] (
+    [NCHDataLogId] INT      IDENTITY (1, 1) NOT NULL,
+    [RecordCount]  INT      NOT NULL,
+    [DateUpdated]  DATETIME NOT NULL,
+    CONSTRAINT [PK_NCHDataLog] PRIMARY KEY CLUSTERED ([NCHDataLogId] ASC) WITH (FILLFACTOR = 50) ON [PRIMARY]
+) ON [PRIMARY];
+

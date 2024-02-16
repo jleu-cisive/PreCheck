@@ -1,0 +1,2 @@
+﻿CREATE USER [CarcoGroup.com\SQL_Devs] FOR LOGIN [CARCOGROUP.COM\SQL_Devs];
+

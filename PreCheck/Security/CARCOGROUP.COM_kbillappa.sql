@@ -1,0 +1,2 @@
+﻿CREATE USER [CARCOGROUP.COM\kbillappa] FOR LOGIN [CARCOGROUP.COM\kbillappa];
+

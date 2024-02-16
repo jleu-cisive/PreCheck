@@ -1,0 +1,28 @@
+﻿CREATE TABLE [dbo].[Talx_Feb2022_Invoice] (
+    [Invoice_Number]            INT            NULL,
+    [Cust_No]                   INT            NULL,
+    [Product_Description]       NVARCHAR (100) NULL,
+    [Transaction_Description]   NVARCHAR (100) NULL,
+    [Date]                      DATE           NULL,
+    [Time]                      TIME (7)       NULL,
+    [Unit_Price]                NVARCHAR (100) NULL,
+    [Quantity]                  NVARCHAR (100) NULL,
+    [Extended]                  NVARCHAR (100) NULL,
+    [State]                     NVARCHAR (2)   NULL,
+    [Reference_ExtOrd_No]       FLOAT (53)     NULL,
+    [Source]                    NVARCHAR (50)  NULL,
+    [Tracking]                  NVARCHAR (50)  NULL,
+    [UserId]                    NVARCHAR (50)  NULL,
+    [Cost_Center]               NVARCHAR (2)   NULL,
+    [Branch_Division]           NVARCHAR (50)  NULL,
+    [Branch_Name_Division_Name] NVARCHAR (1)   NULL,
+    [Lender_Id]                 INT            NULL,
+    [Verifier_Id]               INT            NULL,
+    [Verifier_Name]             NVARCHAR (100) NULL,
+    [Company_Code]              INT            NULL,
+    [Borrower]                  NVARCHAR (100) NULL,
+    [Request_Id]                NVARCHAR (2)   NULL,
+    [SSN_EIN]                   NVARCHAR (100) NULL,
+    [CONSUMER_FIRSTNAME]        NVARCHAR (100) NULL
+);
+

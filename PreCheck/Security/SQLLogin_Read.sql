@@ -1,0 +1,3 @@
+﻿CREATE USER [SQLLogin_Read] FOR LOGIN [SQLLogin_Read]
+    WITH DEFAULT_SCHEMA = [SQLLogin_Read];
+

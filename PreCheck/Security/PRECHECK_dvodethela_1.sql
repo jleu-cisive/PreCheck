@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [PRECHECK\dvodethela]
+    AUTHORIZATION [PRECHECK\dvodethela];
+

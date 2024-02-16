@@ -1,0 +1,25 @@
+﻿CREATE TABLE [dbo].[NetSuiteDailyInvoice] (
+    [ID]                      INT           IDENTITY (1, 1) NOT NULL,
+    [Invoicenumber]           INT           NOT NULL,
+    [Type]                    SMALLINT      NULL,
+    [InvoiceDate]             DATETIME      NULL,
+    [InvoiceMonth]            INT           NULL,
+    [InvoiceYear]             INT           NULL,
+    [CreateDate]              DATETIME      NOT NULL,
+    [Description]             VARCHAR (100) NULL,
+    [Amount]                  MONEY         NULL,
+    [PrecheckPrice]           MONEY         NULL,
+    [ScaleFactor]             SMALLMONEY    NULL,
+    [LeadCountInPackage]      INT           NULL,
+    [AdjustedPriceperPackage] SMALLMONEY    NULL,
+    [Passthru]                SMALLMONEY    NULL,
+    [Frequency]               INT           NULL,
+    [componentprice]          SMALLMONEY    NULL,
+    [leadtype]                VARCHAR (50)  NULL,
+    [NumCase]                 FLOAT (53)    NULL,
+    [Leadtypeid]              INT           NULL,
+    [LeadtypeDescription]     VARCHAR (40)  NULL,
+    [NumLead]                 INT           NULL,
+    CONSTRAINT [NetSuiteDailyInvoice_ID] PRIMARY KEY CLUSTERED ([ID] ASC) WITH (FILLFACTOR = 50)
+);
+

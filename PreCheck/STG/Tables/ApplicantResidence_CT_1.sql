@@ -1,0 +1,27 @@
+﻿CREATE TABLE [STG].[ApplicantResidence_CT_1] (
+    [CommitDateTime]       DATETIME      NULL,
+    [Operation]            VARCHAR (3)   NULL,
+    [__$start_lsn]         BINARY (10)   NULL,
+    [__$end_lsn]           BINARY (10)   NULL,
+    [__$seqval]            BINARY (10)   NULL,
+    [__$operation]         INT           NULL,
+    [__$update_mask]       BINARY (128)  NULL,
+    [ApplicantId]          INT           NULL,
+    [CreateDate]           DATETIME      NULL,
+    [CreateBy]             INT           NULL,
+    [ModifyDate]           DATETIME      NULL,
+    [ModifyBy]             INT           NULL,
+    [Country]              VARCHAR (50)  NULL,
+    [State]                VARCHAR (20)  NULL,
+    [ApplicantResidenceId] INT           NULL,
+    [Address]              VARCHAR (200) NULL,
+    [City]                 VARCHAR (50)  NULL,
+    [County]               VARCHAR (50)  NULL,
+    [Zip]                  VARCHAR (10)  NULL,
+    [DateFrom]             DATETIME      NULL,
+    [DateTo]               DATETIME      NULL,
+    [IsMailingAddress]     BIT           NULL,
+    [IsCurrent]            BIT           NULL,
+    [ApplicantNumber]      INT           NULL
+);
+

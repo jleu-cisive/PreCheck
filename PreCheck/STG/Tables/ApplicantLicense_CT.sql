@@ -1,0 +1,25 @@
+﻿CREATE TABLE [STG].[ApplicantLicense_CT] (
+    [CommitDateTime]     DATETIME      NULL,
+    [Operation]          VARCHAR (3)   NULL,
+    [__$start_lsn]       BINARY (10)   NULL,
+    [__$end_lsn]         BINARY (10)   NULL,
+    [__$seqval]          BINARY (10)   NULL,
+    [__$operation]       INT           NULL,
+    [__$update_mask]     BINARY (128)  NULL,
+    [ApplicantId]        INT           NULL,
+    [CreateDate]         DATETIME      NULL,
+    [CreateBy]           INT           NULL,
+    [ModifyDate]         DATETIME      NULL,
+    [ModifyBy]           INT           NULL,
+    [ApplicantLicenseId] INT           NULL,
+    [NameOnLicense]      VARCHAR (150) NULL,
+    [LicenseType]        VARCHAR (100) NULL,
+    [LicenseNumber]      VARCHAR (20)  NULL,
+    [ExpirationDate]     DATETIME      NULL,
+    [Country]            VARCHAR (50)  NULL,
+    [State]              VARCHAR (20)  NULL,
+    [IsValidLifeTime]    BIT           NULL,
+    [IssueDate]          DATETIME      NULL,
+    [ApplicantNumber]    INT           NULL
+);
+

@@ -1,0 +1,27 @@
+﻿CREATE TABLE [dbo].[DecDSUnknown] (
+    [F1]                                        FLOAT (53)     NULL,
+    [T]                                         NVARCHAR (255) NULL,
+    [206708]                                    NVARCHAR (255) NULL,
+    [HCA (PRECHECK)]                            NVARCHAR (255) NULL,
+    [13965]                                     NVARCHAR (255) NULL,
+    [Marion Community Hospital-Drug Screening]  NVARCHAR (255) NULL,
+    [139651]                                    NVARCHAR (255) NULL,
+    [Marion Community Hospital-Drug Screening1] NVARCHAR (255) NULL,
+    [drugtest]                                  NVARCHAR (255) NULL,
+    [F10]                                       DATETIME       NULL,
+    [F11]                                       FLOAT (53)     NULL,
+    [xxx-xx-5265]                               NVARCHAR (255) NULL,
+    [Unknown, Unknown]                          NVARCHAR (255) NULL,
+    [0573040834-197955360]                      NVARCHAR (255) NULL,
+    [0573040834]                                NVARCHAR (255) NULL,
+    [PreEmploy]                                 NVARCHAR (255) NULL,
+    [F17]                                       NVARCHAR (255) NULL,
+    [2]                                         NVARCHAR (255) NULL,
+    [10panel]                                   NVARCHAR (255) NULL,
+    [185265]                                    NVARCHAR (255) NULL,
+    [Tier 2 - 10panel]                          NVARCHAR (255) NULL,
+    [F22]                                       MONEY          NULL,
+    [F23]                                       MONEY          NULL,
+    [F24]                                       NVARCHAR (255) NULL
+);
+

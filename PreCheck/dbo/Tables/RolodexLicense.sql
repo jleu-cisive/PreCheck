@@ -1,0 +1,25 @@
+﻿CREATE TABLE [dbo].[RolodexLicense] (
+    [RolodexLicenseID]      INT           IDENTITY (1, 1) NOT NULL,
+    [LicenseType]           VARCHAR (200) NULL,
+    [RegType]               VARCHAR (80)  NULL,
+    [Organization]          VARCHAR (200) NULL,
+    [Contact]               VARCHAR (50)  NULL,
+    [AutomatedPhone]        VARCHAR (80)  NULL,
+    [Phone]                 VARCHAR (80)  NULL,
+    [Phone2]                VARCHAR (50)  NULL,
+    [Fax]                   VARCHAR (80)  NULL,
+    [Address]               VARCHAR (255) NULL,
+    [City]                  VARCHAR (50)  NULL,
+    [State]                 VARCHAR (30)  NULL,
+    [Zip]                   VARCHAR (30)  NULL,
+    [Country]               VARCHAR (50)  NULL,
+    [Location]              VARCHAR (50)  NULL,
+    [WebPage]               VARCHAR (255) NULL,
+    [Email]                 VARCHAR (80)  NULL,
+    [Note]                  TEXT          NULL,
+    [CLNO]                  INT           NULL,
+    [Deleted]               BIT           NULL,
+    [refLicContactMethodID] INT           NULL,
+    CONSTRAINT [PK_RolodexLicense] PRIMARY KEY CLUSTERED ([RolodexLicenseID] ASC) WITH (FILLFACTOR = 75)
+) TEXTIMAGE_ON [PRIMARY];
+

@@ -1,0 +1,3 @@
+﻿CREATE USER [PRECHECK\VAmishetti] FOR LOGIN [PRECHECK\VAmishetti]
+    WITH DEFAULT_SCHEMA = [PRECHECK\VAmishetti];
+

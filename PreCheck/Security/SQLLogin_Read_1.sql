@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [SQLLogin_Read]
+    AUTHORIZATION [SQLLogin_Read];
+

@@ -1,0 +1,2 @@
+﻿CREATE USER [PRECHECK\KMiryala] FOR LOGIN [PRECHECK\KMiryala];
+

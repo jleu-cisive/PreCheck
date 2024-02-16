@@ -1,0 +1,2 @@
+﻿CREATE USER [PRECHECK\LMPRewriteService] FOR LOGIN [PRECHECK\LMPRewriteService];
+

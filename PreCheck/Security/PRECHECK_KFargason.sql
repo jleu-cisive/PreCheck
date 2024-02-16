@@ -1,0 +1,3 @@
+﻿CREATE USER [PRECHECK\KFargason]
+    WITH DEFAULT_SCHEMA = [PRECHECK\KFargason];
+

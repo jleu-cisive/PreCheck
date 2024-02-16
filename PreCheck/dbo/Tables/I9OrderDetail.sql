@@ -1,0 +1,25 @@
+﻿CREATE TABLE [dbo].[I9OrderDetail] (
+    [I9OrderDetailID]   BIGINT         IDENTITY (1, 1) NOT NULL,
+    [FirstName]         NVARCHAR (100) NOT NULL,
+    [LastName]          NVARCHAR (100) NOT NULL,
+    [MiddleName]        NVARCHAR (100) NULL,
+    [Email]             NVARCHAR (50)  NOT NULL,
+    [SSN]               NVARCHAR (50)  NOT NULL,
+    [LocationID]        NVARCHAR (50)  NOT NULL,
+    [Clno]              INT            NOT NULL,
+    [ApNo]              INT            NULL,
+    [DARequestTypeId]   INT            NOT NULL,
+    [Status]            NVARCHAR (50)  NOT NULL,
+    [ResultMessage]     NVARCHAR (500) NULL,
+    [ErrorCount]        INT            NULL,
+    [I9RequestId]       BIGINT         NULL,
+    [I9Status]          NVARCHAR (50)  NULL,
+    [ClientRedirectUrl] NVARCHAR (500) NULL,
+    [CreateDate]        DATETIME       NOT NULL,
+    [CreateBy]          NVARCHAR (50)  NULL,
+    [ModifyDate]        DATETIME       NULL,
+    [ModifyBy]          NVARCHAR (50)  NULL,
+    CONSTRAINT [PK_dbo.I9OrderDetail] PRIMARY KEY CLUSTERED ([I9OrderDetailID] ASC),
+    CONSTRAINT [FK_dbo.I9OrderDetail_dbo.I9RequestType_DARequestTypeId] FOREIGN KEY ([DARequestTypeId]) REFERENCES [dbo].[I9RequestType] ([I9RequestTypeId]) ON DELETE CASCADE
+);
+

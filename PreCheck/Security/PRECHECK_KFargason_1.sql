@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [PRECHECK\KFargason]
+    AUTHORIZATION [PRECHECK\KFargason];
+

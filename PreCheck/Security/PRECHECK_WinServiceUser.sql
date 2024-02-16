@@ -1,0 +1,2 @@
+﻿CREATE USER [PRECHECK\WinServiceUser] FOR LOGIN [PRECHECK\WinServiceUser];
+

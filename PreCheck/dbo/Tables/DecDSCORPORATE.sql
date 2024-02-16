@@ -1,0 +1,26 @@
+﻿CREATE TABLE [dbo].[DecDSCORPORATE] (
+    [F1]                 FLOAT (53)     NULL,
+    [T]                  NVARCHAR (255) NULL,
+    [201754]             NVARCHAR (255) NULL,
+    [PRECHECK, INC#]     NVARCHAR (255) NULL,
+    [PreCheck]           NVARCHAR (255) NULL,
+    [PreCheck, Inc#1]    NVARCHAR (255) NULL,
+    [CORPOR]             NVARCHAR (255) NULL,
+    [CORPORATE]          NVARCHAR (255) NULL,
+    [drugtest]           NVARCHAR (255) NULL,
+    [F10]                DATETIME       NULL,
+    [F11]                FLOAT (53)     NULL,
+    [xxx-xx-3665]        NVARCHAR (255) NULL,
+    [Anderson, Lance]    NVARCHAR (255) NULL,
+    [44556244-197551216] NVARCHAR (255) NULL,
+    [44556244]           NVARCHAR (255) NULL,
+    [Other]              NVARCHAR (255) NULL,
+    [F17]                NVARCHAR (255) NULL,
+    [4]                  NVARCHAR (255) NULL,
+    [9panel]             NVARCHAR (255) NULL,
+    [F20]                NVARCHAR (255) NULL,
+    [Tier 4 - 9panel]    NVARCHAR (255) NULL,
+    [F22]                NVARCHAR (255) NULL,
+    [F23]                NVARCHAR (255) NULL
+);
+

@@ -1,0 +1,2 @@
+﻿CREATE USER [CARCOGROUP.COM\SqlHcProdDeployment] FOR LOGIN [CARCOGROUP.COM\SqlHcProdDeployment];
+

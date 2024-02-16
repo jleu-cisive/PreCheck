@@ -1,0 +1,27 @@
+﻿CREATE TABLE [dbo].[WorkNumberArchive] (
+    [WorkNumberArchiveID] INT           IDENTITY (1, 1) NOT NULL,
+    [SSN]                 VARCHAR (20)  NULL,
+    [ArchiveDate]         DATETIME      NULL,
+    [EmployerName]        VARCHAR (255) NULL,
+    [EmployerCode]        VARCHAR (30)  NULL,
+    [EmployerAddr]        VARCHAR (100) NULL,
+    [EmployerAddr2]       VARCHAR (100) NULL,
+    [EmployerState]       VARCHAR (30)  NULL,
+    [EmployerCity]        VARCHAR (30)  NULL,
+    [EmployerZip]         VARCHAR (20)  NULL,
+    [EmployerCountry]     VARCHAR (30)  NULL,
+    [EmployeeSSN]         VARCHAR (20)  NULL,
+    [EmployeeFirst]       VARCHAR (30)  NULL,
+    [EmployeeLast]        VARCHAR (30)  NULL,
+    [DateInfo]            DATETIME      NULL,
+    [DateMostRecentHire]  DATETIME      NULL,
+    [DateOriginalHire]    DATETIME      NULL,
+    [MonthsOfService]     INT           NULL,
+    [DateEndOfEmployment] DATETIME      NULL,
+    [Position]            VARCHAR (50)  NULL,
+    [StatusCode]          VARCHAR (30)  NULL,
+    [StatusMessage]       VARCHAR (150) NULL,
+    [UserID]              VARCHAR (20)  NULL,
+    CONSTRAINT [PK_WorkNumberArchive] PRIMARY KEY CLUSTERED ([WorkNumberArchiveID] ASC) WITH (FILLFACTOR = 50)
+);
+

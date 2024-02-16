@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [PRECHECK\MetastormSA]
+    AUTHORIZATION [PRECHECK\MetastormSA];
+

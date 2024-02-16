@@ -1,0 +1,4 @@
+﻿CREATE VIEW [CTCFG].[vwClientSchedule_NextScheduledDateTime] AS 
+						SELECT DISTINCT N.ClientScheduleID, O.NextScheduledDateTime AS Old_NextScheduledDateTime, N.NextScheduledDateTime AS New_NextScheduledDateTime, T.tran_end_time AS CommitDateTime, N.CLNO AS LastModifiedBy FROM HEVN.[CDC].[dbo_ClientSchedule_CT] O INNER JOIN HEVN.[CDC].[dbo_ClientSchedule_CT] N  ON O.ClientScheduleID = N.ClientScheduleID AND N.__$start_lsn = O.__$start_lsn AND O.__$operation = 3  AND N.__$operation= 4
+						LEFT OUTER  JOIN [HEVN].cdc.lsn_time_mapping T ON N.__$start_lsn = Start_lsn
+						WHERE ISNULL(O.NextScheduledDateTime,'') <>  ISNULL(N.NextScheduledDateTime,'');

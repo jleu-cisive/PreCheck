@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [PRECHECK\VAmishetti]
+    AUTHORIZATION [PRECHECK\VAmishetti];
+

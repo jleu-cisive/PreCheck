@@ -1,0 +1,4 @@
+﻿CREATE PROCEDURE RetLicenseTypes
+AS
+SET NOCOUNT ON
+SELECT Lic_Type FROM LicTypes ORDER BY Lic_Type

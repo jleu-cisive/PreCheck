@@ -1,0 +1,2 @@
+﻿CREATE USER [PRECHECK\App_Support] FOR LOGIN [PRECHECK\App_Support];
+

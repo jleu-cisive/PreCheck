@@ -1,0 +1,2 @@
+﻿CREATE USER [CarcoGroup.com\BISUsers] FOR LOGIN [CARCOGROUP.COM\BISUsers];
+

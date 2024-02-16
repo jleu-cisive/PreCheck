@@ -1,0 +1,3 @@
+﻿CREATE USER [PRECHECK\VAzagappan] FOR LOGIN [PRECHECK\VAzagappan]
+    WITH DEFAULT_SCHEMA = [PRECHECK\VAzagappan];
+

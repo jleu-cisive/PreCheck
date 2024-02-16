@@ -1,0 +1,2 @@
+﻿CREATE USER [ALA-DB-01\HEVN_Webusers];
+
